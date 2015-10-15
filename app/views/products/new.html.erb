@@ -1,5 +1,38 @@
-<h1>New Product</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', products_path %>
+<div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1">
+  <h2>Ajouter un produit</h2>
+  <%= form_for @product do %>
+    <div class="input-field">
+      <i class="material-icons prefix">label</i>
+      <input type="text" class="validate" id="name" name="product[name]" value="" />
+      <label for="name">Nom du produit</label>
+    </div>
+    <div class="input-field">
+      <i class="material-icons prefix">credit_card</i>
+      <input type="text" class="validate" id="price" name="product[price]" value="" />
+      <label for="price">Prix du produit</label>
+    </div>
+    <div class="input-field">
+      <i class="material-icons prefix">assignment</i>
+      <input type="text" class="validate" id="ingredients" name="product[ingredients]" value="" />
+      <label for="ingredients">Ingrédients du produit</label>
+    </div>
+    <div class="input-field">
+      <select name="product[category]">
+        <option value="" disabled selected>Choisir la catégorie</option>
+        <option value="galette">Galettes de Sarrasin au pur blé noir</option>
+        <option value="omelette_salade">Omelettes et salades composées</option>
+        <option value="froment_sucre">Crêoes sucrées au froment</option>
+        <option value="froment_special">Spécialités de crêpes au froment</option>
+        <option value="aperitif">Apéritif</option>
+        <option value="biere_bretonnes">Bières bretonnes</option>
+        <option value="cidre_traditionnel">Cidre traditionnel</option>
+        <option value="digestif">Digestif</option>
+        <option value="cafe_infusion">Café & Infusion</option>
+        <option value="soda_boisson">Soda et Boisson</option>
+        <option value="vin">Vin</option>
+      </select>
+      <label>Catégorie du produit</label>
+    </div>
+    <input type="submit" class="btn" />
+  <% end %>
+</div>

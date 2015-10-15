@@ -1,0 +1,12 @@
+<div class="col s10 offset-s10 m10 offset-m10 l10 offset-l10">
+  <% if flash[:error] %>
+    <div class="card-panel">
+      <span class="light-red-text accent-3"><%= flash[:error] %></span>
+    </div>
+  <% end %>
+  <% if flash[:success] %>
+    <div class="card-panel">
+      <span class="light-green-text accent-3"><%= flash[:success] %></span>
+    </div>
+  <% end %>
+</div>
