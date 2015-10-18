@@ -1,2 +1,12 @@
-<h1>Products#update</h1>
-<p>Find me in app/views/products/update.html.erb</p>
+<div class="row">
+  <% if flash[:error] %>
+    <div class="card-panel red darken-3">
+      <span class="white-text"><%= flash[:error] %></span>
+    </div>
+  <% end %>
+  <% if flash[:success] %>
+    <div class="card-panel teal">
+      <span class="white-text"><%= flash[:success] %></span>
+    </div>
+  <% end %>
+</div>

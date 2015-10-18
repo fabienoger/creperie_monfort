@@ -1,2 +1,40 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+<div class="row">
+  <h1><%= @product.name %></h1>
+  <div class="chip"><%= @product.category %></div>
+  <h4>Ingrédients</h4>
+  <%= form_for @product, class: "col s12 m12 l12" do %>
+    <div class="input-field">
+      <i class="material-icons prefix">label</i>
+      <input type="text" class="validate" id="name" name="product[name]" value="<% if @product.name %><%= @product.name %><% end %>" />
+      <label for="name">Nom du produit</label>
+    </div>
+    <div class="input-field">
+      <i class="material-icons prefix">credit_card</i>
+      <input type="text" class="validate" id="price" name="product[price]" value="<% if @product.price %><%= @product.price %><% end %>" />
+      <label for="price">Prix du produit</label>
+    </div>
+    <div class="input-field">
+      <i class="material-icons prefix">assignment</i>
+      <input type="text" class="validate" id="ingredients" name="product[ingredients]" value="<% if @product.ingredients %><%= @product.ingredients %><% end %>" />
+      <label for="ingredients">Ingrédients du produit</label>
+    </div>
+    <div class="input-field">
+      <select name="product[category]">
+        <option value="" disabled selected>Choisir la catégorie</option>
+        <option value="galette">Galettes de Sarrasin au pur blé noir</option>
+        <option value="omelette_salade">Omelettes et salades composées</option>
+        <option value="froment_sucre">Crêpes sucrées au froment</option>
+        <option value="froment_special">Spécialités de crêpes au froment</option>
+        <option value="aperitif">Apéritif</option>
+        <option value="biere_bretonnes">Bières bretonnes</option>
+        <option value="cidre_traditionnel">Cidre traditionnel</option>
+        <option value="digestif">Digestif</option>
+        <option value="cafe_infusion">Café & Infusion</option>
+        <option value="soda_boisson">Soda et Boisson</option>
+        <option value="vin">Vin</option>
+      </select>
+      <label>Catégorie du produit</label>
+    </div>
+    <input type="submit" class="btn" />
+  <% end %>
+</div>

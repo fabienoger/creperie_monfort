@@ -29,6 +29,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'figaro'
 
+# Debug
+gem 'colorize'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
