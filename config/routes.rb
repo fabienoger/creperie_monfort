@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :products
   get '/home' => 'pages#home'
   get '/contact' => 'pages#contact'
+  get '/carte' => 'pages#carte'
 
   devise_for :users
   root to: 'pages#home'

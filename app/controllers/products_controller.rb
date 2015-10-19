@@ -12,10 +12,11 @@ class ProductsController < ApplicationController
     else
       flash[:error] = "Le produit n'a pas été enregistré."
     end
+    redirect_to '/products'
   end
 
   def index
-    @products = Product.all
+    @products = Product.all.reverse
   end
 
   def show
