@@ -10,11 +10,23 @@
       <span class="white-text"><%= flash[:error] %></span>
     </div>
   <% end %>
-  <div class="col s12 m6 l6 info">
-
-
+  <div class="col s12 m6 l6 infos">
+    <h3>Informations</h3>
+    <div class="valign-wrapper info">
+      <i class="material-icons">phone</i>
+      &nbsp; <span class="valign">
+        Téléphone : <a href="tel:0134860162">0134860162</a>
+      </span>
+    </div>
+    <div class="valign-wrapper info">
+      <i class="material-icons">room</i>
+      &nbsp; <span class="valign">
+        Adresse : 22 rue de Paris - 78490 Monfort L'Amaury
+      </span>
+    </div>
   </div>
   <div class="col s12 m6 l6 formulaire">
+    <h3>Envoyez-nous un e-mail</h3>
     <%= form_for '/contact', method: 'post' do |f| %>
       <% if @message.errors[:name].first %>
         <div class="card-panel red darken-1 col s12">

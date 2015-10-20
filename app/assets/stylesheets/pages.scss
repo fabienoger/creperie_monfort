@@ -1,4 +1,27 @@
+@import "config";
+
 div.row.contact {
+  div.infos {
+    div.info {
+      margin: 15px 0;
+
+      i {
+        display: inline-block;
+        background-color: $p-color;
+        border-radius: 50%;
+        color: #FFF;
+        line-height: 40px;
+        min-width: 40px;
+        text-align: center;
+      }
+      span {
+        display: inline-block;
+        padding-left: 20px;
+        font-size: 1.1em;
+      }
+    }
+  }
+
   div.formulaire {
     div.card-panel.red {
       padding: 15px;

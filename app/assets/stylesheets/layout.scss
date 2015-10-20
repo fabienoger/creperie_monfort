@@ -1,3 +1,10 @@
+@import "config";
+header {
+  nav div.top-bar {
+    background-color: $p-color;
+  }
+}
+
 main.container {
   margin-top: 20px;
 }
