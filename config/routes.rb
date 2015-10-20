@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/carte' => 'pages#carte'
 
+  post '/contact' => 'pages#create'
   devise_for :users
   root to: 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -3,6 +3,16 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @message = Message.new
+  end
+
+  def create
+    @message = Message.new params.require(:message).permit(:name, :email, :content)
+    if @message.save
+      redirect_to '/contact'
+    else
+      render "contact"
+    end
   end
 
   def carte
