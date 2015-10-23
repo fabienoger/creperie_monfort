@@ -10,23 +10,23 @@
       <span class="white-text"><%= flash[:error] %></span>
     </div>
   <% end %>
-  <div class="col s12 m6 l6 infos">
-    <h3>Informations</h3>
+  <div class="col s12 m6 l6 infos center-align">
+    <h4>Informations</h4>
     <div class="valign-wrapper info">
       <i class="material-icons">phone</i>
       &nbsp; <span class="valign">
-        Téléphone : <a href="tel:0134860162">0134860162</a>
+        <a class="phone-number" href="tel:0134860162">0134860162</a>
       </span>
     </div>
     <div class="valign-wrapper info">
       <i class="material-icons">room</i>
       &nbsp; <span class="valign">
-        Adresse : 22 rue de Paris - 78490 Monfort L'Amaury
+        <a class="maps-link" target="_blank" href="https://goo.gl/maps/gGAwHknRH2U2">22 rue de Paris - 78490 Monfort L'Amaury</a>
       </span>
     </div>
   </div>
-  <div class="col s12 m6 l6 formulaire">
-    <h3>Envoyez-nous un e-mail</h3>
+  <div class="col s12 m6 l6 formulaire center-align">
+    <h4>Envoyez-nous un e-mail</h4>
     <%= form_for '/contact', method: 'post' do |f| %>
       <% if @message.errors[:name].first %>
         <div class="card-panel red darken-1 col s12">
@@ -62,5 +62,11 @@
         <button type="submit" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">email</i></button>
       </div>
     <% end %>
+  </div>
+</div>
+<div class="row map">
+  <div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1">
+    <h4 class="center-align">Plan d'accès</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.2292208752424!2d1.8059964507714383!3d48.77751401425105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e69eb72eaac14f%3A0x5a8a89b40d3fbed7!2s22+Rue+de+Paris%2C+78490+Montfort-l&#39;Amaury!5e0!3m2!1sfr!2sfr!4v1445371326922" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </div>

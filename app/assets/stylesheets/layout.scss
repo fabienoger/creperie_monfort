@@ -1,10 +1,27 @@
 @import "config";
-header {
-  nav div.top-bar {
-    background-color: $p-color;
-  }
-}
 
-main.container {
-  margin-top: 20px;
+body {
+  background-color: #FFF;
+  header {
+    nav div.top-bar {
+      background-color: $p-color;
+      div.container-fluid {
+        padding: 0 30px;
+        a.logo {
+          position: relative;
+          display: inline-block;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  main.container-fluid {
+    background-color: #FFF;
+    padding: 15px;
+    margin-top: 20px;
+    .row {
+      padding: 0 15px;
+    }
+  }
 }
