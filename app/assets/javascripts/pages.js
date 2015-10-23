@@ -1,5 +1,7 @@
 $(document).ready(function()
 {
+  $(".button-collapse").sideNav();
+
   // ##### Get all elements #####
   var $parterns = document.getElementById("carousel-parterns");
   var $next = document.getElementById("next");
