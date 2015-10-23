@@ -1,134 +1,194 @@
-<div class="row">
-  <h2 class="center-align">La carte</h2>
+<div class="carte">
+  <h2 class="center-align"><i class="z-depth-3 material-icons">assignment</i>La carte</h2>
   <div class="row boissons">
-    <h4 class="center-align">Carte des boissons</h4>
+    <h4 class="center-align">Nos boissons</h4>
     <div class="col s12 m6 l4">
-      <h6>Apéritifs</h6>
-      <% @aperitifs.each do |aperitif| %>
-        <div class="">
-          <span class="product-name"><%= aperitif.name %></span>
-          <span class="product-price right"><%= aperitif.price %></span>
-        </div>
-      <% end %>
-      <h6>Bières Bretonnes</h6>
-      <% @bieres_bretonnes.each do |biere| %>
-        <div class="">
-          <span class="product-name"><%= biere.name %></span>
-          <span class="product-price right"><%= biere.price %></span>
-        </div>
-      <% end %>
+      <div class="category-aperitif z-depth-3">
+        <h6>Apéritifs</h6>
+        <% @aperitifs.each do |aperitif| %>
+          <div class="product-aperitif">
+            <span class="product-name"><%= aperitif.name %></span>
+            <span class="product-price chip right"><%= aperitif.price %> €</span>
+          </div>
+        <% end %>
+      </div>
+      <div class="category-aperitif z-depth-3">
+        <h6>Bières Bretonnes</h6>
+        <% @bieres_bretonnes.each do |biere| %>
+          <div class="product-aperitif">
+            <span class="product-name"><%= biere.name %></span>
+            <span class="product-price chip right"><%= biere.price %> €</span>
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="col s12 m6 l4">
+      <div class="category-aperitif z-depth-3">
       <h6>Cidre Traditionnel</h6>
       <% @cidres_traditionnel.each do |cidre| %>
-        <div class="">
+        <div class="product-aperitif">
           <span class="product-name"><%= cidre.name %></span>
-          <span class="product-price right"><%= cidre.price %></span>
+          <span class="product-price chip right"><%= cidre.price %> €</span>
         </div>
       <% end %>
-      <h6>Digestifs</h6>
-      <% @digestifs.each do |digestif| %>
-        <div class="">
-          <span class="product-name"><%= digestif.name %></span>
-          <span class="product-price right"><%= digestif.price %></span>
-        </div>
-      <% end %>
-      <h6>Café & Infusions</h6>
-      <% @cafes_infusions.each do |product| %>
-        <div class="">
-          <span class="product-name"><%= product.name %></span>
-          <span class="product-price right"><%= product.price %></span>
-        </div>
-      <% end %>
+      </div>
+      <div class="category-aperitif z-depth-3">
+        <h6>Digestifs</h6>
+        <% @digestifs.each do |digestif| %>
+          <div class="product-aperitif">
+            <span class="product-name"><%= digestif.name %></span>
+            <span class="product-price chip right"><%= digestif.price %> €</span>
+          </div>
+        <% end %>
+      </div>
+      <div class="category-aperitif z-depth-3">
+        <h6>Café & Infusions</h6>
+        <% @cafes_infusions.each do |product| %>
+          <div class="product-aperitif">
+            <span class="product-name"><%= product.name %></span>
+            <span class="product-price chip right"><%= product.price %> €</span>
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="col s12 m12 l4">
-      <h6>Soda et Boissons</h6>
-      <% @sodas_boissons.each do |boisson| %>
-        <div class="">
-          <span class="product-name"><%= boisson.name %></span>
-          <span class="product-price right"><%= boisson.price %></span>
-        </div>
-      <% end %>
-      <h6>Vins</h6>
-      <% @vins.each do |vin| %>
-        <div class="">
-          <span class="product-name"><%= vin.name %></span>
-          <span class="product-price right"><%= vin.price %></span>
-        </div>
-      <% end %>
+      <div class="category-aperitif z-depth-3">
+        <h6>Soda et Boissons</h6>
+        <% @sodas_boissons.each do |boisson| %>
+          <div class="product-aperitif">
+            <span class="product-name"><%= boisson.name %></span>
+            <span class="product-price chip right"><%= boisson.price %> €</span>
+          </div>
+        <% end %>
+      </div>
+      <div class="category-aperitif z-depth-3">
+        <h6>Vins</h6>
+        <% @vins.each do |vin| %>
+          <div class="product-aperitif">
+            <span class="product-name"><%= vin.name %></span>
+            <span class="product-price chip right"><%= vin.price %> €</span>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="row galettes">
+  <div class="col s12 m6 l6 galettes">
     <h4 class="center-align">Galettes de Sarrasin au pur Blé Noir</h4>
     <% @galettes.each do |galette| %>
-      <div class="">
-        <span class="product-name"><%= galette.name %></span>
-        <span class="product-price right"><%= galette.price %></span>
+      <div class="galette">
+        <div class="header-galette">
+          <span class="product-name"><%= galette.name %></span>
+          <span class="product-price chip right"><%= galette.price %> €</span>
+        </div>
+        <div class="content-galette">
+          <p>Ingrédients : <%= galette.ingredients %></p>
+        </div>
       </div>
     <% end %>
-  </div>
-  <div class="row omelettes-salades">
-    <h4 class="center-align">Omelettes et Salades Composées</h4>
-    <% @omelettes_salades.each do |product| %>
-      <div class="">
-        <span class="product-name"><%= product.name %></span>
-        <span class="product-price right"><%= product.price %></span>
-      </div>
-    <% end %>
-  </div>
-  <div class="row froments-sucre">
-    <h4 class="center-align">Crêpes Sucrées au Froment</h4>
-    <% @froments_sucre.each do |crepe| %>
-      <div class="">
-        <span class="product-name"><%= crepe.name %></span>
-        <span class="product-price right"><%= crepe.price %></span>
-      </div>
-    <% end %>
-  </div>
-  <div class="row froments-special">
-    <h4 class="center-align">Spécialités de Crêpes au Froment</h4>
-    <% @froments_special.each do |crepe| %>
-      <div class="">
-        <span class="product-name"><%= crepe.name %></span>
-        <span class="product-price right"><%= crepe.price %></span>
-      </div>
-    <% end %>
-  </div>
-  <div class="row desserts">
-    <h4 class="center-align">Glaces, Sorbets & Desserts</h4>
-    <div class="col s12 m12 l12">
-      <p><span class="title">Glaces : </span><span class="parfums">Vanille, Café, Fraise, Caramel au Beurre Salé, Menthe Chocolat, Rhum Raison</span></p>
-      <p><span class="title">Sorbets : </span><span class="parfums">Cassis, Citron, Framboise, Mangue, Pomme</span></p>
+    <div class="row froments-special">
+      <h4 class="center-align">Spécialités de Crêpes au Froment</h4>
+      <% @froments_special.each do |crepe| %>
+        <div class="crepe-froment">
+          <div class="header-crepe-froment">
+            <span class="product-name"><%= crepe.name %></span>
+            <span class="product-price chip right"><%= crepe.price %> €</span>
+          </div>
+          <div class="content-crepe-froment">
+            <p>Ingrédients : <%= crepe.ingredients %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div class="col s12 m4 l4">
-      <h6>Glaces et Sorbets</h6>
-      <div>
-        <span class="product-name">Coupe 1 boule</span>
-        <span class="product-price right">3 €</span>
-      </div>
-      <div>
-        <span class="product-name">Coupe 2 boule</span>
-        <span class="product-price right">5 €</span>
-      </div>
-      <div>
-        <span class="product-name">Coupe 3 boule</span>
-        <span class="product-price right">6.5 €</span>
-      </div>
-      <h6>Patisserie</h6>
-      <div>
-          <span class="product-name">Far Breton Maison</span>
-          <span class="product-price right">5.5 €</span>
-      </div>
+  </div>
+  <div class="col s12 m6 l6">
+    <div class="row omelettes-salades">
+      <h4 class="center-align">Omelettes et Salades Composées</h4>
+      <% @omelettes_salades.each do |product| %>
+        <div class="omelette-salade">
+          <div class="header-omelette-salade">
+            <span class="product-name"><%= product.name %></span>
+            <span class="product-price chip right"><%= product.price %> €</span>
+          </div>
+          <div class="content-omelette-salade">
+            <p>Ingrédients : <%= product.ingredients %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div class="s12 m8 l8">
-      <h4 class="center-align">Coupes Glacées</h4>
-      <div>
-        <span class="product-name">Coupe Colonel</span>
-        <span class="product-price right">8.9 €</span>
+    <div class="row froments-sucre">
+      <h4 class="center-align">Crêpes Sucrées au Froment</h4>
+      <% @froments_sucre.each do |crepe| %>
+        <div class="crepe-sucre">
+          <div class="header-crepe-sucre">
+            <span class="product-name"><%= crepe.name %></span>
+            <span class="product-price chip right"><%= crepe.price %> €</span>
+          </div>
+          <div class="content-crepe-sucre">
+            <p>Ingrédients : <%= crepe.ingredients %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="row desserts">
+      <div class="title-desserts">
+        <h4 class="center-align">Glaces, Sorbets & Desserts</h4>
       </div>
-      <div>
-        <span class="product-name">Coupe O' Tours de Crêpes</span>
-        <span class="product-price right">8.5 €</span>
+      <div class="row content-desserts">
+        <h5 class="center-align">Parfums</h5>
+        <div class="col s12 m6 l6 glaces">
+          <h6 class="center-align">Glaces</h6>
+          <div class="parfums">
+            <span class="chip">Vanille</span>
+            <span class="chip">Café</span>
+            <span class="chip">Fraise</span>
+            <span class="chip">Caramel au Beurre Salé</span>
+            <span class="chip">Menthe Chocolat</span>
+            <span class="chip">Rhum Raisin</span>
+          </div>
+        </div>
+        <div class="col s12 m6 l6 sorbets">
+          <h6 class="center-align">Sorbets</h6>
+          <div class="parfums">
+            <span class="chip">Cassis</span>
+            <span class="chip">Citron</span>
+            <span class="chip">Framboise</span>
+            <span class="chip">Mangue</span>
+            <span class="chip">Pomme</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l6 tarif">
+        <div class="row">
+          <h4>Glaces et Sorbets</h4>
+          <div>
+            <span class="product-name">Coupe 1 boule</span>
+            <span class="product-price right">3 €</span>
+          </div>
+          <div>
+            <span class="product-name">Coupe 2 boule</span>
+            <span class="product-price right">5 €</span>
+          </div>
+          <div>
+            <span class="product-name">Coupe 3 boule</span>
+            <span class="product-price right">6.5 €</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l6 coupes-glacees">
+        <h4 class="center-align">Coupes Glacées</h4>
+        <div>
+          <span class="product-name">Coupe Colonel</span>
+          <span class="product-price right">8.9 €</span>
+        </div>
+        <div>
+          <span class="product-name">Coupe O' Tours de Crêpes</span>
+          <span class="product-price right">8.5 €</span>
+        </div>
+        <h4>Patisserie</h4>
+        <div>
+            <span class="product-name">Far Breton Maison</span>
+            <span class="product-price right">5.5 €</span>
+        </div>
       </div>
     </div>
   </div>

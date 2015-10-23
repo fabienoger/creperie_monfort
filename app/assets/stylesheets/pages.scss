@@ -30,6 +30,215 @@ div.row.parterns {
   }
 }
 
+div.carte {
+  margin-left: -15px;
+  margin-right: -15px;
+
+  h2 {
+    color: $p-color;
+    margin: 50px 0;
+    i {
+      background-color: $p-color;
+      display: inline-block;
+      margin-right: 20px;
+      transition: 1s;
+      color: #FFF;
+      border: 0px;
+      border-radius: 50%;
+      width: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 35px;
+    }
+   i:hover {
+      background-color: transparent;
+      color: $p-color;
+    }
+  }
+
+  h4 {
+    color: $p-color;
+    margin: 50px 0;
+  }
+
+  div.row.boissons {
+    border-bottom: 2px solid $p-color;
+    div.category-aperitif {
+      padding-bottom: 15px;
+      border: 2px solid $p-color;
+      margin: 15px;
+      h6 {
+        font-size: 1.3em;
+        background-color: $p-color;
+        color: $s-color;
+        margin-top: 0;
+        padding: 15px;
+      }
+      div.product-aperitif {
+        padding: 10px 15px;
+        span {
+          color: $p-color;
+        }
+        span.product-price {
+          color: $p-color;
+        }
+      }
+    }
+  }
+
+  div.col.galettes {
+    div.galette {
+      border: 2px solid $p-color;
+      margin: 5px 0;
+      div.header-galette {
+        padding: 10px 15px;
+        background-color: $p-color;
+        span {
+          color: $s-color;
+        }
+        span.product-price {
+          color: $p-color;
+          margin-top: -5px;
+        }
+      }
+      div.content-galette {
+        padding: 5px 15px;
+        color: $p-color;
+        background-color: #FFF;
+      }
+    }
+  }
+
+  div.row.omelettes-salades {
+    div.omelette-salade {
+      border: 2px solid $p-color;
+      margin: 5px 0;
+      div.header-omelette-salade {
+        padding: 10px 15px;
+        background-color: $p-color;
+        span {
+          color: $s-color;
+        }
+        span.product-price {
+          color: $s-color;
+        }
+        span.product-price {
+          color: $p-color;
+          margin-top: -5px;
+        }
+      }
+      div.content-omelette-salade {
+        padding: 5px 15px;
+        color: $p-color;
+        background-color: #FFF;
+      }
+    }
+  }
+
+  div.row.froments-sucre {
+    div.crepe-sucre {
+      border: 2px solid $p-color;
+      margin: 5px 0;
+      div.header-crepe-sucre {
+        padding: 10px 15px;
+        background-color: $p-color;
+        span {
+          color: $s-color;
+        }
+        span.product-price {
+          color: $p-color;
+          margin-top: -5px;
+        }
+      }
+      div.content-crepe-sucre {
+        padding: 5px 15px;
+        color: $p-color;
+        background-color: #FFF;
+      }
+    }
+  }
+
+  div.row.froments-special {
+    div.crepe-froment {
+      border: 2px solid $p-color;
+      margin: 5px 0;
+      div.header-crepe-froment {
+        padding: 10px 15px;
+        background-color: $p-color;
+        span {
+          color: $s-color;
+        }
+        span.product-price {
+          color: $p-color;
+          margin-top: -5px;
+        }
+      }
+      div.content-crepe-froment {
+        padding: 5px 15px;
+        color: $p-color;
+        background-color: #FFF;
+      }
+    }
+  }
+
+  div.row.desserts {
+    border: 2px solid $p-color;
+    padding: 0 0 15px 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    div.title-desserts {
+      h4 {
+        color: $s-color;
+        margin: 0;
+        padding: 15px 0;
+      }
+      background-color: $p-color;
+    }
+    div.row.content-desserts {
+      h5 {
+        color: $p-color;
+      }
+      div.glaces {
+        h6 {
+          color: $p-color;
+          font-size: 1.3em;
+        }
+        div.parfums {
+          span.chip {
+            color: $p-color;
+            margin: 5px 0;
+          }
+        }
+      }
+      div.sorbets {
+        h6 {
+          color: $p-color;
+          font-size: 1.3em;
+        }
+        div.parfums {
+          span.chip {
+            color: $p-color;
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+    div.tarif {
+      
+      h4 {
+        margin: 15px 0;
+        font-size: 1.5em;
+      }
+    }
+    div.coupes-glacees {
+      h4 {
+        margin: 15px 0;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
 div.row.contact {
   div.infos {
     div.info {
