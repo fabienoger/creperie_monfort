@@ -22,7 +22,7 @@ $(document).ready(function()
   {
     stopSlide();
     console.log(n);
-    if (n > ($parterns.offsetWidth / 400)) {n = -1};
+    if (n > ((nbChild / 2) - 1)) {n = -1};
     n++;
     $parterns.children[0].style.marginLeft = n * -$parterns.offsetWidth + 'px';
     startInterval();
@@ -41,10 +41,12 @@ $(document).ready(function()
 
   function startInterval()
   {
+    console.log("Start Interval");
     autoSlide = setInterval(next, 3000);
   }
 
   function stopSlide() {
+    console.log("Stop Slide");
     clearInterval(autoSlide);
   }
 
