@@ -30,6 +30,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'figaro'
 
+# Mail
+gem 'mail'
+gem 'mailjet'
+
 # Debug
 gem 'colorize'
 
