@@ -296,6 +296,26 @@ div.carte {
 }
 
 div.row.contact {
+  h2.contact-title {
+    color: $p-color;
+    i {
+      background-color: $p-color;
+      display: inline-block;
+      margin-right: 20px;
+      transition: 1s;
+      color: #FFF;
+      border: 0px;
+      border-radius: 50%;
+      width: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 35px;
+    }
+   i:hover {
+      background-color: transparent;
+      color: $p-color;
+    }
+  }
   div.infos {
     div.hourly {
       margin: 15px 0;
