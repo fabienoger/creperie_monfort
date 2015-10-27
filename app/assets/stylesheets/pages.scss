@@ -1,52 +1,55 @@
 @import "config";
 
 div.row.parterns {
-  ul.row#carousel-parterns {
-    height: 200px;
-    padding: 0;
-    white-space: nowrap;
-    overflow: hidden;
-
-    li.partern {
-      box-sizing: border-box;
-      margin-left: -4px;
-      display: inline-block;
-      width: 100%;
+  div.global-parterns {
+    ul.row#carousel-parterns {
       height: 200px;
-      background-color: $p-color;
-      transition: all 1s ease;
-      padding: 15px 0;
-      h4 {
-        color: $s-color;
-      }
-      a {
-        padding-top: 50px;
-        display: block;
-        background-color: $s-color;
+      padding: 0;
+      white-space: nowrap;
+      overflow: hidden;
+
+      li.partern {
+        box-sizing: border-box;
+        margin-left: -4px;
+        display: inline-block;
+        width: 100%;
         height: 200px;
-        color: $p-color;
-        text-align: center;
-        transition: 1s;
-        font-size: 1.3em;
-      }
-      a:hover {
         background-color: $p-color;
-        color: $s-color;
+        transition: all 1s ease;
+        padding: 15px 0;
+        h4 {
+          color: $s-color;
+        }
+        a {
+          padding-top: 50px;
+          display: block;
+          background-color: $s-color;
+          height: 200px;
+          color: $p-color;
+          text-align: center;
+          transition: 1s;
+          font-size: 1.3em;
+        }
+        a:hover {
+          background-color: $p-color;
+          color: $s-color;
+        }
       }
     }
-
     div.parterns-actions {
+      position: relative;
       button.btn-floating {
         display: inline-block;
         position: absolute;
         background-color: $p-color;
         color: $s-color;
+        bottom: 75px;
       }
       button#previous {
-
+        left: -10px;
       }
       button#next {
-        
+        right: -10px;
       }
     }
   }
@@ -262,6 +265,19 @@ div.carte {
 
 div.row.contact {
   div.infos {
+    div.hourly {
+      margin: 15px 0;
+
+      i {
+        display: inline-block;
+        background-color: $p-color;
+        border-radius: 50%;
+        color: #FFF;
+        line-height: 40px;
+        min-width: 40px;
+        text-align: center;
+      }
+    }
     div.info {
       margin: 15px 0;
 
@@ -315,6 +331,33 @@ div.row.contact {
     }
     button.btn-floating {
       background-color: $p-color;
+    }
+  }
+}
+
+@media all and (max-width: 650px)
+{
+  h2.home-title {
+    font-size: 2em;
+  }
+  div.presentation {
+    span.card-title {
+      font-size: 1.3em;
+    }
+  }
+  div.row.parterns {
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+    div.global-parterns {
+      ul.row {
+        li.partern {
+          h4 {
+            font-size: 1.7em;
+          }
+        }
+      }
     }
   }
 }

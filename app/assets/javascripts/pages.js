@@ -13,15 +13,11 @@ $(document).ready(function()
   autoSlide = "";
   nbChild = $parterns.children.length;
 
-  console.log($parterns.offsetWidth);
-  console.log(nbChild);
-  console.log($parterns.offsetWidth / 400);
   // ##### Moove functions #####
 
   function next()
   {
     stopSlide();
-    console.log(n);
     if (n == (nbChild - 1)) {n = -1};
     n++;
     $parterns.children[0].style.marginLeft = n * -$parterns.offsetWidth + 'px';
@@ -31,7 +27,7 @@ $(document).ready(function()
   function previous()
   {
     stopSlide();
-    if (n == 0) {n = 3};
+    if (n == 0) {n = nbChild};
     n--;
     $parterns.children[0].style.marginLeft = n * -$parterns.offsetWidth + 'px';
     startInterval();
@@ -44,7 +40,8 @@ $(document).ready(function()
     autoSlide = setInterval(next, 3000);
   }
 
-  function stopSlide() {
+  function stopSlide()
+  {
     clearInterval(autoSlide);
   }
 
