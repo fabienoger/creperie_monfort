@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @message = Message.new params.require(:message).permit(:name, :email, :content)
     if @message.save
       UserMailer.contact_form(@message).deliver_now
-      flash[:success] = "L'email à bien été envoyé."
+      flash[:success] = "L'email a bien été envoy"
       redirect_to '/contact'
     else
       flash[:error] = "L'email n'a pas été envoyé."
