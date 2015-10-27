@@ -33,6 +33,25 @@ div.row.formules {
 }
 
 div.row.parterns {
+  h2 {
+    i {
+      background-color: $p-color;
+      display: inline-block;
+      margin-right: 20px;
+      transition: 1s;
+      color: #FFF;
+      border: 0px;
+      border-radius: 50%;
+      width: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 35px;
+    }
+   i:hover {
+      background-color: transparent;
+      color: $p-color;
+    }
+  }
   div.global-parterns {
     ul.row#carousel-parterns {
       height: 200px;
@@ -49,8 +68,21 @@ div.row.parterns {
         background-color: $p-color;
         transition: all 1s ease;
         padding: 15px 0;
+
         h4 {
           color: $s-color;
+          font-size: 1.7em;
+        }
+        &.with-link {
+          h4 {
+          }
+        }
+        &.alone-link {
+        padding: 0;
+          h4 {
+            font-size: 2em;
+            line-height: 228px;
+          }
         }
         a {
           padding-top: 50px;
@@ -419,6 +451,11 @@ div.row.contact {
     h2 {
       font-size: 2em;
       text-align: center;
+    }
+    li.partern.alone-link {
+      h4.center-align {
+        font-size: 1.5em !important;
+      }
     }
     div.global-parterns {
       ul.row {

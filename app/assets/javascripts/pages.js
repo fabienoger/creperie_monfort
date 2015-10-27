@@ -43,7 +43,7 @@ $(document).ready(function()
     if (n == (nbChild - 1)) {n = -1};
     n++;
     $parterns.children[0].style.marginLeft = n * -$parterns.offsetWidth + 'px';
-    startInterval();
+//    startInterval();
   }
 
   function previous()
@@ -52,7 +52,7 @@ $(document).ready(function()
     if (n == 0) {n = nbChild};
     n--;
     $parterns.children[0].style.marginLeft = n * -$parterns.offsetWidth + 'px';
-    startInterval();
+//    startInterval();
   }
 
   // ##### Action functions #####
@@ -70,9 +70,9 @@ $(document).ready(function()
   // ##### Calling functions #####
   if ($parterns != null || $next != null || $previous != null)
   {
-    startInterval();
-    $parterns.onmouseover = stopSlide;
-    $parterns.onmouseout = startInterval;
+//    startInterval();
+//    $parterns.onmouseover = stopSlide;
+//    $parterns.onmouseout = startInterval;
     $next.onclick = next;
     $previous.onclick = previous;
   }
