@@ -2,17 +2,17 @@ $(document).ready(function()
 {
   // ##### Select topButton #####
   $topButton = document.getElementById("topButton");
-  $topButton.style.display = "none";
+  if ($topButton != null)
+    $topButton.style.display = "none";
 
   // ##### Verify scroll position #####
   $(window).scroll(function(){
-    if($(window).scrollTop() > $(window).height() && $topButton.style.display == "none")
+    if ($topButton != null)
     {
-      $topButton.style.display = "inline-block";
-    }
-    else if($(window).scrollTop() <= 0 && $topButton.style.display == "inline-block")
-    {
-      $topButton.style.display = "none";
+      if($(window).scrollTop() > $(window).height() && $topButton.style.display == "none")
+        $topButton.style.display = "inline-block";
+      else if($(window).scrollTop() <= 0 && $topButton.style.display == "inline-block")
+        $topButton.style.display = "none";
     }
   });
 
