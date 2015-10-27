@@ -1,8 +1,30 @@
 $(document).ready(function()
 {
+  // ##### Select topButton #####
+  $topButton = document.getElementById("topButton");
+  $topButton.style.display = "none";
+
+  // ##### Verify scroll position #####
+  $(window).scroll(function(){
+    if($(window).scrollTop() > $(window).height() && $topButton.style.display == "none")
+    {
+      $topButton.style.display = "inline-block";
+    }
+    else if($(window).scrollTop() <= 0 && $topButton.style.display == "inline-block")
+    {
+      $topButton.style.display = "none";
+    }
+  });
+
+  // ##### Scroll top on click #####
+  $("a[href='#top']").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+
   $(".button-collapse").sideNav();
 
-  // ##### Get all elements #####
+  // ##### Select all elements #####
   var $parterns = document.getElementById("carousel-parterns");
   var $next = document.getElementById("next");
   var $previous = document.getElementById("previous");
