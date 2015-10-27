@@ -1,5 +1,37 @@
 @import "config";
 
+div.row.formules {
+  div.col.offre, div.col.formule {
+    div.bloc-title {
+      background-color: $p-color;
+      padding: 15px 0;
+      h3 {
+        color: $s-color;
+        margin: 0;
+      }
+    }
+    div.content {
+      padding: 15px;
+      background-color: $s-color;
+      h5 {
+        margin: 0;
+      }
+    }
+    div.price {
+      background-color: $p-color;
+      padding: 15px 0;
+    }
+  }
+  div.card.formule {
+    background-color: $p-color;
+    div.card-content {
+      p, span {
+        color: $s-color;
+      }
+    }
+  }
+}
+
 div.row.parterns {
   div.global-parterns {
     ul.row#carousel-parterns {
@@ -337,6 +369,11 @@ div.row.contact {
 
 @media all and (max-width: 650px)
 {
+  div.row.formules {
+    div.col.offre, div.col.formule {
+      margin: 15px 0;
+    }
+  }
   h2.home-title {
     font-size: 2em;
   }
