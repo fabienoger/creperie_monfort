@@ -2,7 +2,6 @@
 
 div.row.parterns {
   ul.row#carousel-parterns {
-    border: 1px #000 solid;
     height: 200px;
     padding: 0;
     white-space: nowrap;
@@ -12,20 +11,43 @@ div.row.parterns {
       box-sizing: border-box;
       margin-left: -4px;
       display: inline-block;
-      width: 50%;
+      width: 100%;
       height: 200px;
       background-color: $p-color;
       transition: all 1s ease;
-      padding: 15px;
+      padding: 15px 0;
       h4 {
         color: $s-color;
       }
+      a {
+        padding-top: 50px;
+        display: block;
+        background-color: $s-color;
+        height: 200px;
+        color: $p-color;
+        text-align: center;
+        transition: 1s;
+        font-size: 1.3em;
+      }
+      a:hover {
+        background-color: $p-color;
+        color: $s-color;
+      }
     }
-  }
-  div.parterns-actions {
-    button.btn-floating {
-      background-color: $p-color;
-      color: $s-color;
+
+    div.parterns-actions {
+      button.btn-floating {
+        display: inline-block;
+        position: absolute;
+        background-color: $p-color;
+        color: $s-color;
+      }
+      button#previous {
+
+      }
+      button#next {
+        
+      }
     }
   }
 }
@@ -224,7 +246,6 @@ div.carte {
       }
     }
     div.tarif {
-      
       h4 {
         margin: 15px 0;
         font-size: 1.5em;
