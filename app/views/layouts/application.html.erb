@@ -13,12 +13,13 @@
       <nav>
         <div class="nav-wrapper top-bar">
           <div class="container-fluid">
-            <a href="/" class="brand-logo logo right"><img src="/assets/logo.png"></a>
-            <a href="" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="left hide-on-med-and-down">
+            <a href="/" class="brand-logo logo left"><img src="/assets/logo.png"></a>
+            <a href="" data-activates="mobile-menu" class="right button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="menu hide-on-med-and-down">
               <li><a href="/">Accueil</a></li>
               <li><a href="/carte">La carte</a></li>
-                <li><a href="/contact">Contact</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/reservez">Réservez</a></li>
               <% if user_signed_in? %>
                 <li><%= link_to "Produits", products_path %></li>
                 <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log out</a></li>
@@ -28,6 +29,7 @@
               <li><a href="/">Accueil</a></li>
               <li><a href="/carte">La carte</a></li>
               <li><a href="/contact">Contact</a></li>
+              <li><a href="/reservez">Réservez</a></li>
               <% if user_signed_in? %>
                 <li><%= link_to "Produits", products_path %></li>
                 <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log out</a></li>

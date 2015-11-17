@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Informations sur la réservation :</h1>
+    <p>Réservation pour <%= @booking.number %> personnes le <%= @booking.date.strftime("%d:%m:%Y") %> à <%= @booking.hour %></p>
+    <h1>Informations sur le client :</h1>
+    <p>Nom: <%= @booking.name %></p>
+    <p>E-mail: <%= @booking.email %></p>
+    <p>Téléphone: <%= @booking.phone %></p>
+    <p>IP: <%= @booking.ip %></p>
+  </body>
+</html>

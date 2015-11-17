@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get '/home' => 'pages#home'
   get '/contact' => 'pages#contact'
   get '/carte' => 'pages#carte'
+  get '/reservez' => 'pages#book'
 
+  post '/reservez' => 'pages#booking'
   post '/contact' => 'pages#create'
   devise_for :users
   root to: 'pages#home'

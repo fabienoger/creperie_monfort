@@ -6,4 +6,9 @@ class UserMailer < ApplicationMailer
     @message = message
     mail(to: "fab.oger0@gmail.com", subject: "Contact form #{@message.name}")
   end
+
+  def booking(booking)
+    @booking = booking
+    mail(to: "fab.oger0@gmail.com", subject: "Nouvelle réservation")
+  end
 end

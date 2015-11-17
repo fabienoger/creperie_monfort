@@ -1,5 +1,37 @@
 @import "config";
 
+div.row.book {
+  h2.book-title {
+
+  }
+  form {
+    .input-field label {
+      color: $p-color;
+    }
+    .input-field select option {
+      color: $p-color;
+    }
+    .input-field input[type=text]:focus + label {
+      color: $p-color;
+    }
+    .input-field textarea:focus {
+      border-bottom: 1px solid $p-color;
+      box-shadow: 0 1px 0 0 $p-color;
+    }
+    .input-field input[type=text]:focus, .input-field input[type=date]:focus {
+      border-bottom: 1px solid $p-color;
+      box-shadow: 0 1px 0 0 $p-color;
+    }
+    .input-field .prefix.active {
+      color: $p-color;
+    }
+    button.btn-large {
+      margin-top: 30px;
+      background-color: $p-color;
+    }
+  }
+}
+
 div.row.formules {
   div.col.offre, div.col.formule {
     div.bloc-title {

@@ -24,6 +24,7 @@ $(document).ready(function()
 
   $(".button-collapse").sideNav();
 
+/*
   // ##### Select all elements #####
   var $parterns = document.getElementById("carousel-parterns");
   var $next = document.getElementById("next");
@@ -76,4 +77,5 @@ $(document).ready(function()
     $next.onclick = next;
     $previous.onclick = previous;
   }
+*/
 });

@@ -1,0 +1,99 @@
+<div class="row book">
+  <h2 class="center-align book-title">Réservez</h2>
+  <% if flash[:success] %>
+    <div class="card-panel green text-accent-2">
+      <span class="white-text"><%= flash[:success] %></span>
+    </div>
+  <% end %>
+  <% if flash[:error] %>
+    <div class="card-panel red darken-1">
+      <span class="white-text"><%= flash[:error] %></span>
+    </div>
+  <% end %>
+  <%= form_for '/book', method: 'post' do |f| %>
+    <div class="col s12 m6">
+      <% if @booking.errors[:date].first %>
+        <div class="card-panel red darken-1">
+          <span class="white-text"><%= @booking.errors[:date].first %></span>
+        </div>
+      <% end %>
+      <div class="input-field">
+        <input type="date" name="booking[date]" id="date" class="datepicker">
+        <label for="date" class="active">Date *</label>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <% if @booking.errors[:number].first %>
+        <div class="card-panel red darken-1">
+          <span class="white-text"><%= @booking.errors[:number].first %></span>
+        </div>
+      <% end %>
+      <div class="input-field">
+        <select name="booking[number]">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+        <label>Nombre de personne *</label>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <% if @booking.errors[:hour].first %>
+        <div class="card-panel red darken-1">
+          <span class="white-text"><%= @booking.errors[:hour].first %></span>
+        </div>
+      <% end %>
+      <div class="input-field">
+        <i class="material-icons prefix">schedule</i>
+        <input id="hour" name="booking[hour]" type="text" class="validate">
+        <label for="hour">Heure *</label>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <% if @booking.errors[:name].first %>
+        <div class="card-panel red darken-1">
+          <span class="white-text"><%= @booking.errors[:name].first %></span>
+        </div>
+      <% end %>
+      <div class="input-field">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="name" name="booking[name]" type="text" class="validate">
+        <label for="name">Nom *</label>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <% if @booking.errors[:phone].first %>
+        <div class="card-panel red darken-1">
+          <span class="white-text"><%= @booking.errors[:phone].first %></span>
+        </div>
+      <% end %>
+      <div class="input-field">
+        <i class="material-icons prefix">phone</i>
+        <input id="phone" name="booking[phone]" type="text" class="validate">
+        <label for="phone">Téléphone *</label>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <% if @booking.errors[:email].first %>
+        <div class="card-panel red darken-1">
+          <span class="white-text"><%= @booking.errors[:email].first %></span>
+        </div>
+      <% end %>
+      <div class="input-field">
+        <i class="material-icons prefix">email</i>
+        <input id="email" name="booking[email]" type="text" class="validate">
+        <label for="email">E-mail *</label>
+      </div>
+    </div>
+    <div class="col s12 m12 center-align">
+      <button type="submit" class="btn-large waves-effect waves-light">
+        <i class="material-icons left">done</i>&nbsp; Réservez
+      </button>
+    </div>
+  <% end %>
+</div>
