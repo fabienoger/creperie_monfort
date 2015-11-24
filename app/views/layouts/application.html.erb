@@ -13,13 +13,22 @@
       <nav>
         <div class="nav-wrapper top-bar">
           <div class="container-fluid">
+            <ul id="sous-menu-carte" class="dropdown-content">
+              <li><a href="/galettes-sarrasin">Galettes Sarrasin</a></li>
+              <li><a href="/crepes-froment">Crêpes Froment</a></li>
+              <li><a href="/omelettes-salades">Omelettes Salades</a></li>
+              <li><a href="/crepes-sucre">Crêpes Sucrée</a></li>
+              <li><a href="/desserts">Desserts</a></li>
+              <li><a href="/boissons">Boissons</a></li>
+            </ul>
             <a href="/" class="brand-logo logo left"><img src="/assets/logo.png"></a>
             <a href="" data-activates="mobile-menu" class="right button-collapse"><i class="material-icons">menu</i></a>
             <ul class="menu hide-on-med-and-down">
-              <li><a href="/">Accueil</a></li>
-              <li><a href="/carte">La carte</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/reservez">Réservez</a></li>
+              <li><a href="/"><img src="/assets/home.png" class="home" height="30" width="30">Accueil</a></li>
+              <li><a href="/carte" class="dropdown-button" data-activates="sous-menu-carte">La carte<i class="material-icons left">arrow_drop_down</i></a></li>
+              <li><a href="/contact">Contact<i class="material-icons left">email</i></a></li>
+              <li><a href="/reservez">Réservez<i class="material-icons left">receipt</i></a></li>
+              <li class="facebook"><a href="https://www.facebook.com/otoursdecrepes/" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
               <% if user_signed_in? %>
                 <li><%= link_to "Produits", products_path %></li>
                 <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log out</a></li>
@@ -27,9 +36,10 @@
             </ul>
             <ul class="side-nav" id="mobile-menu">
               <li><a href="/">Accueil</a></li>
-              <li><a href="/carte">La carte</a></li>
+              <li><a href="#" class="dropdown-button" data-activates="sous-menu-carte">La carte</a></li>
               <li><a href="/contact">Contact</a></li>
               <li><a href="/reservez">Réservez</a></li>
+              <li class="mobile-facebook"><a href="https://www.facebook.com/otoursdecrepes/" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
               <% if user_signed_in? %>
                 <li><%= link_to "Produits", products_path %></li>
                 <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Log out</a></li>

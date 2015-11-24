@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  # carte
+  get '/galettes-sarrasin' => "carte#galettes_sarrasin"
+  get '/crepes-froment' => "carte#crepes_froment"
+  get '/omelettes-salades' => "carte#omelettes_salades"
+  get '/crepes-sucre' => "carte#crepes_sucre"
+  get '/desserts' => "carte#desserts"
+  get '/boissons' => "carte#boissons"
+
   resources :products
   get '/home' => 'pages#home'
   get '/contact' => 'pages#contact'

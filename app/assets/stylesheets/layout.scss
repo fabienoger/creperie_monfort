@@ -12,6 +12,36 @@ body {
       background-color: $p-color;
       div.container-fluid {
         padding: 0 15px;
+
+        li.mobile-facebook:hover {
+          background-color: inherit;
+        }
+        li.mobile-facebook {
+          text-align: center;
+        }
+        li.facebook:hover {
+          background-color: $p-color;
+        }
+        li {
+          a {
+            img.home {
+              margin: 28px 10px 28px 0;
+              float: left;
+            }
+            i {
+              line-height: 95px;
+            }
+          }
+        }
+        ul#sous-menu-carte {
+          li {
+            line-height: 20px;
+            a {
+              font-size: 1em;
+              color: $p-color;
+            }
+          }
+        }
         a.button-collapse {
           margin: 20px 0;
         }
@@ -21,7 +51,7 @@ body {
           margin-top: 5px;
         }
         ul.menu {
-          margin-left: 50px;
+          margin-left: 370px;
           li {
             line-height: 95px;
           }
