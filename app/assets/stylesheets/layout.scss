@@ -13,6 +13,13 @@ body {
       div.container-fluid {
         padding: 0 15px;
 
+        ul#mobile-menu {
+          li {
+            a {
+              color: $p-color;
+            }
+          }
+        }
         li.mobile-facebook:hover {
           background-color: inherit;
         }
@@ -33,7 +40,7 @@ body {
             }
           }
         }
-        ul#sous-menu-carte {
+        ul#sous-menu-carte, ul#sous-menu-carte-mobile {
           li {
             line-height: 20px;
             a {
@@ -51,7 +58,7 @@ body {
           margin-top: 5px;
         }
         ul.menu {
-          margin-left: 370px;
+          margin-left: 300px;
           li {
             line-height: 95px;
           }

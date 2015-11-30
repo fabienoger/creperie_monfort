@@ -16,3 +16,4 @@
 /config/application.yml
 /db/data.yml
 /public/assets/*
+*.swp
