@@ -1,19 +1,22 @@
 $(document).ready(function(){
 
+  $(document).ready(function(){
+    $('.slider').slider({
+      height: 500,
+    });
+  });
   n = 0;
   childrens = $(".carte-slides").children();
   $(".carte-slides > li").each(function() {
     console.log(this);
-    $(this).fadeIn("slow");
+    $(this).fadeOut("fast");
   });
-/*  for (i = 0; i < childrens.length; i++ )
+  for (i = 0; i < childrens.length; i++ )
   {
     console.log(childrens[i]);
-    childrens[i].fadeOut("slow");
     next(childrens[i], childrens[i + 1])
-    n++;
   }
-*/
+
   // ##### Next slide #####
   function next(slide, nSlide) {
     nSlide.fadeIn();

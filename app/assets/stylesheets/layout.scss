@@ -5,11 +5,12 @@
 }
 
 body {
-  background: url('/assets/confectionary.png');
+  background: url('/assets/dark_embroidery.png');
   header {
     nav div.top-bar {
       height: 95px;
       background-color: $p-color;
+
       div.container-fluid {
         padding: 0 15px;
 
@@ -55,7 +56,11 @@ body {
         a.logo {
           position: relative;
           display: inline-block;
-          margin-top: 5px;
+          height: 95px;
+
+          img {
+            margin-top: 5px;
+          }
         }
         ul.menu {
           margin-left: 300px;

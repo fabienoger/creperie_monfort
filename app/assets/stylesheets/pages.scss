@@ -1,5 +1,13 @@
 @import "config";
 
+div.home-header {
+  background-color: #FFF;
+  margin: 0 -15px;
+}
+h2 {
+  color: $p-color;
+}
+
 div.row.book {
   h2.book-title {
 
